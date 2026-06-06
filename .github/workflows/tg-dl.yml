@@ -46,7 +46,7 @@ jobs:
                   size=$(stat -c%s "$file")
                   if [ $size -gt 94371840 ]; then
                     echo "📦 در حال تقسیم $file ($(($size/1024/1024))MB)..."
-                    rar a -v90m -ep "${file%.*}.rar" "$file"
+                    rar a -v900m -ep "${file%.*}.rar" "$file"
                     rm "$file"
                   fi
                 fi
